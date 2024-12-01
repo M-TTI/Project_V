@@ -4,16 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://b61dxou1dm4ne" path="res://assets/enemy.png" id="2_i8c4t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6e0y3"]
-size = Vector2(80, 79)
+size = Vector2(323, 311)
 
 [node name="Enemy" type="RigidBody2D"]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_i5o42")
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_i8c4t")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="EnemyCollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6e0y3")

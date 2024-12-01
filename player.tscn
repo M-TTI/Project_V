@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://player.gd" id="1_dmvyf"]
 [ext_resource type="Texture2D" uid="uid://c2o1k6r6w6r2" path="res://assets/placeholder.png" id="2_icgyr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_38sl2"]
-size = Vector2(981, 644)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x38lt"]
+size = Vector2(982, 646)
 
 [node name="Player" type="Area2D"]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_dmvyf")
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_38sl2")
+shape = SubResource("RectangleShape2D_x38lt")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_icgyr")
