@@ -6,14 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x38lt"]
 size = Vector2(982, 646)
 
-[node name="Player" type="Area2D"]
+[node name="World" type="Node"]
+
+[node name="Player" type="Area2D" parent="."]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_dmvyf")
 
-[node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_x38lt")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_icgyr")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
